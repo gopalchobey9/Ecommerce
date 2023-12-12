@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+<h1 style="text-align: center;">Home Page </h1>
+<div class="row mt-5">
+    <div class="row">
+    <% for(let item of products){ %>
+
+            
+        <%if(item.author.equals(currentUser._id)){%>
+            <div class="col-lg-4 product-card">
+                <div class="card text-center shadow mt-3 mx-auto shadow-lg p-3 mb-5 bg-grey rounded" style="width:18rem; background-color: #888888; box-shadow: 2px 2px 5px #888888;">
+                       <Strong> <h2 style="color: crimson;">My Product</h2></Strong>
+                        <% } else {  %>
+                            <div class="col-lg-4 product-card">
+                            <div class="card text-center shadow mt-3 mx-auto" style="width: 18rem;">
+                                <%}%>
+                    <img src="<%=item.img%>" class="card-img-top img" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"> <%= item.name %> </h3>
+                        <h5 class="card-title"> Rs: <%= item.price %> </h5>
+                        <p class="card-text"> <%= item.desc.substring(0,20) %>... </p>
+
+                        <p><%=item.reviews.length%> review</p>
+                   
+                        
+
+                        <a href="/products/<%= item._id %>" class="btn btn-primary">View Product</a>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        </div>
+
+
+<%- include('../partials/footer') %>

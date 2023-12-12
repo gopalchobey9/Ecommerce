@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+<%- include('../partials/flash') %>
+
+
+    <h1 style="text-align: center; padding: 20px;">Signup page</h1>
+    <div class="form-group" style="display: flex; justify-content: center;">
+    <form action="/register" method="post">
+        <div>
+            <label for="naam">Username</label>
+            <input type="text" name="username" id="naam" class="form-control"> 
+        </div>
+        <div>
+            <label for="mail">Email</label>
+            <input type="email" name="email" id="mail" class="form-control"> 
+        </div>
+        <div class="mb-4">
+            <p class="mb-2">  Want to register as ?</p>
+            <div class="mx-2">
+                <label class="form-label" for="buyer">Buyer:</label>
+                <input type="radio" class="form-check-input" name="role" id="buyer" value="buyer">
+                
+            </div>
+            <div class="mx-2">
+                <label for="seller">Seller:</label>
+                <input class="form-check-input" type="radio" name="role" id="seller" value="seller">
+
+            </div>
+        </div>
+        
+        <div>
+            <label for="pass">Password</label>
+            <input type="text" name="password" id="pass" class="form-control">
+        </div>
+
+        <button  class="btn btn-primary" type="submit">Signup</button>
+        <span >
+            already have an account
+            <a href="/login" style="text-decoration: none; "> Login</a>
+        </span>
+    </form>
+    
+    </div>
+
+
+    
+<%- include('../partials/footer') %>

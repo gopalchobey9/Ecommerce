@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+<%- include('../partials/flash') %>
+<h1 style="text-align: center; padding: 20px;">Login page</h1>
+    <div class="form-group" style="display: flex; justify-content: center;">
+   
+    <form action="/login" method="post">
+
+        <div>
+            <label for="naam">Username</label>
+            <input type="text" name="username" id="naam" class="form-control"> 
+        </div>
+        <div>
+            <label for="pass">Password</label>
+            <input type="text" name="password" id="pass" class="form-control">
+        </div>
+        <button  class="btn btn-primary" type="submit">Login </button>
+        <span>not have account ?<a href="/register"> click here</a></span>
+
+    </form>
+       </div>
+
+        
+<%- include('../partials/footer') %>

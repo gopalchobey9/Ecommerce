@@ -1,0 +1,19 @@
+joi -- server side validation used in prdocution --svhema descriptive language 
+it is a data validator 
+-------------------------------------------
+session is server side storage
+session store key value pair 
+-------------------------------------------
+populate() is a function used in Mongoose, which is an Object Data Modeling (ODM) library
+ for MongoDB and Node. js. The function is used to populate reference fields in a document of a
+  certain collection with documents from another collection
+-----------------------------------------------------
+equals() check two obj ids
+-----------------------------------------------------------------
+AJAX  we used for rela time change like we used in the like button 
+axios -- like button 
+---------------------------------
+api return the data to be manipulated 
+route return the entire response  i.e  ejs file
+
+
