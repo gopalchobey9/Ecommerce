@@ -10,10 +10,27 @@ populate() is a function used in Mongoose, which is an Object Data Modeling (ODM
 -----------------------------------------------------
 equals() check two obj ids
 -----------------------------------------------------------------
-AJAX  we used for rela time change like we used in the like button 
+AJAX( Asynchronous JavaScript And XML.)  we used for rela time change like we used in the like button 
+
+
+
 axios -- like button 
 ---------------------------------
 api return the data to be manipulated 
 route return the entire response  i.e  ejs file
 
 
+
+
+Payment gateway  methods :
+stripe 
+payu
+paypal
+rajorpay
+
+
+ .env file(dotenv)  -  environmental variable 
+ process.env.MERCHANT_KEY
+
+ .gitignore  -- do not push the files 
+ 
