@@ -20,10 +20,10 @@ const validateReview =(req,res,next)=>{
 
 
  const isLoggedin = (req,res,next)=>{
-if(!req.isAuthenticated()){
-    console.log('You are not logged in' );
-    return res.redirect('/login');
-}
+// if(!req.isAuthenticated()){
+//     console.log('You are not logged in' );
+//     return res.redirect('/login');
+// }
 next();
  }  
 
@@ -43,5 +43,10 @@ next();
  const isProductAuthor = (req,res,next)=>{
     
  }
+
+
+
+
+ 
 
  module.exports ={isSeller,validateProduct,validateReview,isLoggedin}

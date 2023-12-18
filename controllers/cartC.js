@@ -2,8 +2,8 @@ const Product = require('../model/Product');
 const User = require('../model/User');
 
 const getCart =async(req,res) => {
-    const prod = await User.findById(req.user._id);
-res.render('cart/cart',{prod })
+    const prod = await User.findById(req.user._id).populate('cart');
+    res.render('cart/cart',{prod})
 
 
 }
