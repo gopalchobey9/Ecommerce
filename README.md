@@ -47,3 +47,15 @@ Welcome to the E-Commerce website project! This web application is built using N
 
 3. run the application
    npm start
+
+4. some Screenshots are
+  **Login page**
+   ![image](https://github.com/gopalchobey9/Ecommerce/assets/100458189/702c625b-3b9b-4bfe-aae7-dd7b30543e26)
+
+   **Signup page**
+   ![image](https://github.com/gopalchobey9/Ecommerce/assets/100458189/3955ca26-f54c-4677-8e7f-a23841348026)
+
+   **Home Page**
+   ![image](https://github.com/gopalchobey9/Ecommerce/assets/100458189/8a79a698-7e2e-44a4-807b-697b124b9fac)
+
+
