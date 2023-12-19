@@ -28,7 +28,7 @@ let configSession ={
       maxAge:24*7*60*60*1000
             }
    } 
-mongoose.connect("mongodb://127.0.0.1:27017/ecommerce").then(()=>{
+mongoose.connect("mongodb+srv://gopalchobey9:PRAswT3JzwruJ3HQ@cluster0.ovwdlyu.mongodb.net/?retryWrites=true&w=majority").then(()=>{
     console.log("Connect");
 
  }).catch((err)=>{
