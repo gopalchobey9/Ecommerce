@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="/css/app">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border: 1px black solid;">
 <span>
 
@@ -8,7 +10,8 @@
   <a class="navbar-brand" href="/products">Shopping App</a>
 </span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon">
+    </span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,25 +32,52 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >login</button>
     </form>
     <%} else {%>
-      <div style="padding:10px; display: flex;">
-        <div class="dropdown">
-          <button class="dropbtn">profile</button>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+      <div class="dropdown">
+        <button class="dropbtn"><img src="/uploads/<%=currentUser.image%>" alt="photo"></button>
+        <div class="dropdown-content">
+          <div class="container mt-4 mb-4 p-3 d-flex justify-content-center"> 
+            <div class="card p-4"> 
+              <div class=" image d-flex flex-column justify-content-center align-items-center"> 
+                <button class="btn btn-secondary"> 
+                  <img src="/uploads/<%=currentUser.image%>" height="100" width="100" />
+                </button> <span class="name mt-3"><%=currentUser.username%></span> 
+                <span class="idd"><%=currentUser.email%></span> 
+                <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> 
+                  <span><i class="fa fa-copy"></i></span> 
+                </div> <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                    </div> <div class=" d-flex mt-2"> 
+                    <form action="/profile">
+                      <button class="btn1 btn-dark">Edit Profile</button> 
+                    </form>
+                  </div> 
+                  <div class="text mt-3">  </div> 
+                  <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                    <span><i class="fab fa-linkedin"></i></span>
+                    </div> <div class=" px-2 rounded mt-4 date "> 
+                    <span class="join">
+                    Joined  <%if(currentUser.createdAt){%>
+                    <p class="text-muted"> <%=currentUser.createdAt.toDateString()%></p>
+                  <%}%>
+                </span> </div> </div> </div>
+</div>
+      </div>
+      </div>
+      
+      <div class="d-flex align-items-center">
+       
+         
+         <a href="/user/cart" class="mr-3"> 
+           
+           <i class="fa-solid fa-cart-shopping fa-xl"></i>
+           <sup> <span class="badge bg-danger"><%=currentUser.cart.length%></span></sup>  
+          </a>
+          <form style="padding:10px;" action="/logout" method="post">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  >logout</a>
+            </form>
           </div>
-        </div>
-        <strong style="padding:10px;"><a href="#">Hello,<%=currentUser.username%>,<%= currentUser.role%></a></strong>
-       <a href="/user/cart"> 
-        
-        <i class="fa-solid fa-cart-shopping fa-xl"></i>
-      <sup> <span class="badge bg-danger"><%=currentUser.cart.length%></span></sup>  
-      </a>
-        <form style="padding:10px;" action="/logout" method="post">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"  >logout</a>
-          </form>
-        </div>
     <% } %>
  
 

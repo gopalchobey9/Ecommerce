@@ -41,18 +41,19 @@ mongoose.connect("mongodb://127.0.0.1:27017/ecommerce").then(()=>{
  app.set("view engine", "ejs");
  app.set("views",path.join(__dirname,'views'));
  app.use(express.static(path.join(__dirname,'public')))
+ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
-
+ 
+ app.use(session(configSession));
+ passport.use(new LocalStrategy(User.authenticate()));
+ app.use(passport.initialize());
+ app.use(passport.session());
+ passport.serializeUser(User.serializeUser());
+ passport.deserializeUser(User.deserializeUser());
  app.use(express.urlencoded({extended:true}));
  app.use(methodOverride('_method'));
- app.use(session(configSession));
  app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-passport.use(new LocalStrategy(User.authenticate()));
 
 // Middleware to set local variables
 app.use((req, res, next) => {

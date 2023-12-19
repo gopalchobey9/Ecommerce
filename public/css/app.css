@@ -1,6 +1,6 @@
 
 :root{
-    --main-color: #0077b6;
+    --main-color: #62c1f5;
 }
 main{
     margin-top: 5.5rem;
@@ -11,11 +11,6 @@ main{
     width: 100%;
 
 }
-
-.product-card .btn{
-    background-color: var(--main-color) ;
-}
-
 .product-card{
     height: 60vh;
 }
@@ -24,7 +19,7 @@ main{
     margin-top: 100px;
 }
 body{
-    background-color: aquamarine;
+    background-color: rgb(252, 255, 255);
 }
 
 
@@ -32,26 +27,41 @@ body{
 /* profile section css  */
 
 .dropbtn {
-    background-color: #04AA6D;
+    background-color:white;
     color: white;
-    padding: 16px;
+    
     font-size: 16px;
     border: none;
+    border-radius: 50%;
+    
+  }
+  .dropbtn img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
   }
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
+    text-align: center;
+    align-items: center;
+    place-items: center;
+    justify-items: center;
+    
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%; /* Position below the .dropdown button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   
@@ -71,3 +81,90 @@ body{
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+  /*  profile section   css */
+
+
+  
+.card {
+    width: 350px;
+    background-color: #efefef;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.card:hover .image img {
+    transform: scale(1.5)
+}
+/* 
+.btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+} */
+
+.name {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.idd1 {
+    font-size: 12px
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #000;
+    color: #aeaeae;
+    font-size: 15px
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500
+}
+
+.icons i {
+    font-size: 19px
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: bold
+}
+
+.date {
+    background-color: #ccc
+}

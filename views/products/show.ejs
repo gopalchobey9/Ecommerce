@@ -19,7 +19,7 @@
                   <form action="/user/<%=foundProduct._id%>/add" method="post">
 
                       <button class="btn btn-secondary" type="submit">Add to Cart</a>
-                        
+                        </button>
                       </form>
                   <% if (currentUser && currentUser.role === 'seller') { %>
                     <%if(foundProduct.author.toString() ==  currentUser._id){%>

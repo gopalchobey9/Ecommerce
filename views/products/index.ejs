@@ -6,13 +6,13 @@
     <% for(let item of products){ %>
 
             
-        <%if(item.author.equals(currentUser._id)){%>
+        <%if(item.author.equals(currentUser.id)){%>
             <div class="col-lg-4 product-card">
-                <div class="card text-center shadow mt-3 mx-auto shadow-lg p-3 mb-5 bg-grey rounded" style="width:18rem; background-color: #888888; box-shadow: 2px 2px 5px #888888;">
+                <div class="card text-center shadow mt-3 mx-auto shadow-lg p-3 mb-5 bg-grey rounded" style="width:18rem; background-color: #b9b5b5; box-shadow: 2px 2px 5px #888888;">
                        <Strong> <h2 style="color: crimson;">My Product</h2></Strong>
                         <% } else {  %>
                             <div class="col-lg-4 product-card">
-                            <div class="card text-center shadow mt-3 mx-auto" style="width: 18rem;">
+                            <div class="card text-center shadow mt-3 mx-auto" style="width: 18rem;color: blue;  background-color: #b9b5b5">
                                 <%}%>
                     <img src="<%=item.img%>" class="card-img-top img" alt="...">
                     <div class="card-body">

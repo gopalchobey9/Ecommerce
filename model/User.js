@@ -9,14 +9,17 @@ const userSchema = new mongoose.Schema({
     required:true,
     unique:true
    },
+   image:{
+    type:String,
+   },
    role:{
-    type:String, 
-    required:true
+    type:String,
+    required:true,
   },cart:[{
     type:mongoose.Schema.Types.ObjectId,
     ref:'Product',
   }]
-} );
+} ,{timestamps:true});
 
   //adding plugin to the user Schema
   userSchema.plugin(passportLocalMongoose);

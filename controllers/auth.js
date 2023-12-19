@@ -9,11 +9,15 @@ const getRegister = (req, res) => {
 } 
 const postRegister = async (req, res) => {
     try {
-      let { username, email, password, role } = req.body;
-      let newUser = new User({ username, email, role });
+      let { username, email, password, role,image } = req.body;
+      let newUser = new User({ username, email, role,image });
+      newUser.image = req.file.filename;
       console.log(role);
       const newuser = await User.register(newUser, password);
       req.flash('success', 'Successfully registered. You can now log in.');
+      console.log(req.body);
+      console.log(req.file);
+
       res.redirect('/login');
     } catch (err) {
       req.flash('error', 'Error during registration. Please try again.');

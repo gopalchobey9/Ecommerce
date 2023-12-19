@@ -3,6 +3,7 @@ const Product = require("../model/Product");
 const  showproducts = async (req,res)=>{
     try{
    let products = await Product.find();
+   console.log(req.body);
    res.render('products/index',{products})
     }
     catch(e){

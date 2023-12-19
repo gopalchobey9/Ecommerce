@@ -4,12 +4,18 @@
 
 
     <h1 style="text-align: center; padding: 20px;">Signup page</h1>
-    <div class="form-group" style="display: flex; justify-content: center;">
-    <form action="/register" method="post">
+    <div class="form-group" style="display: flex; justify-content: center; ">
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <div>
+            <div style="display: flex; flex-direction: row;">
+                    <label for="image">Profile image : </label>
+                    <input type="file" name="image" id="image" />
+            </div>
         <div>
             <label for="naam">Username</label>
             <input type="text" name="username" id="naam" class="form-control"> 
         </div>
+        
         <div>
             <label for="mail">Email</label>
             <input type="email" name="email" id="mail" class="form-control"> 
@@ -38,6 +44,7 @@
             already have an account
             <a href="/login" style="text-decoration: none; "> Login</a>
         </span>
+    </div>
     </form>
     
     </div>
