@@ -2,6 +2,8 @@
 
 Welcome to the E-Commerce website project! This web application is built using Node.js, Express, and MongoDB for managing products, user authentication, and shopping cart functionality.
 
+Website is live at :  https://ecommercewebsite-phal.onrender.com/
+
 ## Features
 
 - **User Authentication:**
