@@ -6,6 +6,10 @@ const {main,getRegister,postRegister,getLogin,postLogin,logout} = require("../co
 const multer = require("multer")    
 
 
+router.get('/',(req,res)=>{
+    res.render('auth/login')
+});
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
        cb(null, './uploads')
